@@ -17,8 +17,10 @@ fn prime(x: f64) {
 
     if flag == false {
         println!("{} is a prime number", x);
+
     } else {
-        println!("{} is not a prime number", x)
+        println!("{} is not a prime number", x);
+
     }
 }
 
@@ -27,7 +29,7 @@ fn main() {
     println!("Enter a number: ");
 
     let mut input_text = String::new();
-    
+
     io::stdin()
         .read_line(&mut input_text)
         .expect("failed to read from stdin");
@@ -38,4 +40,12 @@ fn main() {
         Ok(i) => prime(i),
         Err(..) => println!("Err"),
     };
+
+    println!("");
+
+    println!("Press enter to exit");
+ 
+    io::stdin().read_line(&mut String::new()).unwrap();
+        
+
 }
